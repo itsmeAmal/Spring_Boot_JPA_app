@@ -11,9 +11,10 @@ import com.example.model.User;
 @Component
 public class userService {
 	
+	EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
+	EntityManager em = emf.createEntityManager();
+	
 	public User addUser(User user) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
-		EntityManager em = emf.createEntityManager();
 		em.getTransaction().begin();
 		em.persist(user);
 		em.getTransaction().commit();		
@@ -21,16 +22,14 @@ public class userService {
 	}
 	
 	public User getUserByUserId(int userId) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
-		EntityManager em = emf.createEntityManager();
 		User user = em.find(User.class, userId);
 		return user;
 	}
 	
 	public User deleteUserByUserId(int userId) {
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("pu");
-		EntityManager em = emf.createEntityManager();
-		return null;
+		User user = em.find(User.class, userId);
+		em.remove(user); 
+		return user;
 	}
 	
 	
