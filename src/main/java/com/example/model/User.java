@@ -25,6 +25,14 @@ public class User {
 	@Column(name="user_status")
 	private int userStatus;
 	
+	public User(int id, String userName, String userPassword, String userEmail, int userStatus) {
+		super();
+		this.id = id;
+		this.userName = userName;
+		this.userPassword = userPassword;
+		this.userEmail = userEmail;
+		this.userStatus = userStatus;
+	}
 	public int getId() {
 		return id;
 	}
