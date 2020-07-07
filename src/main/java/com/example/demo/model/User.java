@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.demo.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -33,6 +33,9 @@ public class User {
 		this.userEmail = userEmail;
 		this.userStatus = userStatus;
 	}
+	
+	private User() {}
+	
 	public int getId() {
 		return id;
 	}

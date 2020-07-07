@@ -1,4 +1,4 @@
-package com.example.service;
+package com.example.demo.service;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 import org.springframework.stereotype.Component;
 
-import com.example.model.User;
+import com.example.demo.model.User;
 
 @Component
 public class userService {
