@@ -1,5 +1,7 @@
 package com.example.demo.restcontroller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -24,5 +26,10 @@ public class userRestController {
 	public User getUserById(@PathVariable int userId) {
 		return userService.getUserByUserId(userId);
 	} 
+	
+	@GetMapping("user/getAllUsers")
+	public List<User> getAllUsers(){
+		return userService.getAllUsers();
+	}
 
 }
