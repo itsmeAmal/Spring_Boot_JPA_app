@@ -32,7 +32,7 @@ public class userServiceImpl implements userService{
 		if(user.getId() != 0) {
 			userRepositories.save(user);
 		}
-		return null;
+		return user;
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class userServiceImpl implements userService{
 
 	@Override
 	public User getUserByUserId(int userId) {
-		User user = userRepositories.getOne(userId);
+		User user = userRepositories.getOne(userId); 
 		return user;
 	}
 

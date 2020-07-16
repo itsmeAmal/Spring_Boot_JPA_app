@@ -34,7 +34,7 @@ public class User {
 		this.userStatus = userStatus;
 	}
 	
-	private User() {}
+	public User() {}
 	
 	public int getId() {
 		return id;
