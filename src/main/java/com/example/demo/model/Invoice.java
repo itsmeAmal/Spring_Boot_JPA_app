@@ -1,8 +1,7 @@
 package com.example.demo.model;
 
 import java.math.BigDecimal;
-import java.sql.Date;
-import java.sql.Time;
+import java.sql.Timestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -18,10 +17,10 @@ public class Invoice {
 	private int invoiceId;
 	
 	@Column(name="invoice_date")
-	private Date invoiceDate;
+	private Timestamp invoiceDate;
 	
 	@Column(name="invoice_time")
-	private Time invoiceTime;
+	private Timestamp invoiceTime;
 	
 	@Column(name="invoice_user_id")
 	private int userId;
@@ -43,7 +42,7 @@ public class Invoice {
 	
 	public Invoice() {} 
 
-	public Invoice(int invoiceId, Date invoiceDate, Time invoiceTime, int userId, BigDecimal invoiceTotal, int itemQty,
+	public Invoice(int invoiceId, Timestamp invoiceDate, Timestamp invoiceTime, int userId, BigDecimal invoiceTotal, int itemQty,
 			BigDecimal discountRate, int customerId, BigDecimal cashPay) {
 		super();
 		this.invoiceId = invoiceId;
@@ -72,19 +71,19 @@ public class Invoice {
 		this.invoiceId = invoiceId;
 	}
 
-	public Date getInvoiceDate() {
+	public Timestamp getInvoiceDate() {
 		return invoiceDate;
 	}
 
-	public void setInvoiceDate(Date invoiceDate) {
+	public void setInvoiceDate(Timestamp invoiceDate) {
 		this.invoiceDate = invoiceDate;
 	}
 
-	public Time getInvoiceTime() {
+	public Timestamp getInvoiceTime() {
 		return invoiceTime;
 	}
 
-	public void setInvoiceTime(Time invoiceTime) {
+	public void setInvoiceTime(Timestamp invoiceTime) {
 		this.invoiceTime = invoiceTime;
 	}
 

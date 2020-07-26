@@ -77,6 +77,8 @@ public class Item {
 	
 	@Column(name="item_status")
 	private int status;
+	
+	public Item() {}
 		
 	public Item(int id, String itemName, String itemCode, String barcode, int reorderLevel, String status_1,
 			BigDecimal status_2, int status_3, BigDecimal sllingPrice, String categoryName, String subCategoryName,

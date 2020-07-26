@@ -10,13 +10,13 @@ import javax.persistence.Table;
 public class User {
 	
 	@Id
-	@Column(name="user_id")
+	@Column(name="user_id", unique = true, nullable = false)
 	private int id;
 	
 	@Column(name="user_name")
 	private String userName;
 	
-	@Column(name="user_pw")
+	@Column(name="user_password")
 	private String userPassword;
 	
 	@Column(name="user_email")
@@ -27,6 +27,8 @@ public class User {
 	
 	@Column(name="user_pw")
 	private String userPw;		
+	
+	public User() {}
 		
 		public User(int id, String userName, String userPassword, String userEmail, int userStatus, String userPw) {
 			super();
