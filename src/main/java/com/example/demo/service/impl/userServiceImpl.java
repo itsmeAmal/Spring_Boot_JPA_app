@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.model.User;
 import com.example.demo.repository.userRepositories;
-import com.example.demo.service.userService;
+import com.example.demo.service.userServiceDao;
 
 @Service
-public class userServiceImpl implements userService{
+public class userServiceImpl implements userServiceDao{
 	
 	@Autowired
 	private userRepositories userRepositories;

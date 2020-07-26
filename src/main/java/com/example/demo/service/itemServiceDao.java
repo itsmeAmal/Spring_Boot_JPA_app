@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.example.demo.model.Item;
 
-public interface itemService {
+public interface itemServiceDao {
 
 	public List<Item> getAllItems();
 	

@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.example.demo.model.Item;
 import com.example.demo.repository.itemRepositories;
-import com.example.demo.service.itemService;
+import com.example.demo.service.itemServiceDao;
 
 @Service
-public class itemServiceImpl implements itemService{
+public class itemServiceImpl implements itemServiceDao{
 	
 	@Autowired
 	private itemRepositories itemRepositories;

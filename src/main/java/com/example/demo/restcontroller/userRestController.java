@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.User;
-import com.example.demo.service.userService;
+import com.example.demo.service.userServiceDao;
 
 @RestController
 public class userRestController { 
 	
 	@Autowired
-	private userService userService;
+	private userServiceDao userService;
 	
 	@PostMapping("/addUser")
 	public User addUser(User user) {

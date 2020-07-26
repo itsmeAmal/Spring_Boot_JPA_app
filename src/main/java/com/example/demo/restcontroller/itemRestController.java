@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.model.Item;
-import com.example.demo.service.itemService;
+import com.example.demo.service.itemServiceDao;
 
 @RestController
 public class itemRestController {
 	
 	@Autowired
-	private itemService itemService;
+	private itemServiceDao itemService;
 	
 	@PostMapping("/addItem")
 	public Item addItem(Item item) {

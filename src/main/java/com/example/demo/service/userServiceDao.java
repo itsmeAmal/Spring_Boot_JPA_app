@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.example.demo.model.User;
 
-public interface userService {
+public interface userServiceDao {
 	
 	public List<User> getAllUsers();
 	
