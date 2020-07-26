@@ -3,15 +3,17 @@ package com.example.demo.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.example.demo.model.Invoice;
-import com.example.demo.repository.invoiceRepositories;
+import com.example.demo.repository.invRepositories;
 import com.example.demo.service.invoiceServiceDao;
 
+@Service
 public class invoiceServiceImpl implements invoiceServiceDao {
 	
 	@Autowired
-	private invoiceRepositories invRepo;
+	private invRepositories invRepo;
 
 	@Override
 	public Invoice addInvoice(Invoice invoice) {
