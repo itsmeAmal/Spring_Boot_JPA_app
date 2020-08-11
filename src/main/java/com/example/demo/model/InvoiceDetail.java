@@ -38,9 +38,7 @@ public class InvoiceDetail {
 	
 	@Column(name="invoice_detail_purchase_price") 
 	private BigDecimal purchasePrice;
-	
-	public void InvoiceDetail() {}
-	
+		
 	public InvoiceDetail(Integer invoiceDetailId, Integer invoiceId, Integer itemId, BigDecimal itemQty,
 			String itemUnit, BigDecimal unitPrice, BigDecimal sellingPrice, BigDecimal discountRate,
 			BigDecimal purchasePrice) {
